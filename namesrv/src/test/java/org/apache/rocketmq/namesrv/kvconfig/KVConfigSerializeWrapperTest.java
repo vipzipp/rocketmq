@@ -41,6 +41,7 @@ public class KVConfigSerializeWrapperTest {
         result.put(NamesrvUtil.NAMESPACE_ORDER_TOPIC_CONFIG, kvs);
         kvConfigSerializeWrapper.setConfigTable(result);
         byte[] serializeByte = KVConfigSerializeWrapper.encode(kvConfigSerializeWrapper);
+        System.out.println(new String(serializeByte));
         assertThat(serializeByte).isNotNull();
 
         KVConfigSerializeWrapper deserializeObject = KVConfigSerializeWrapper.decode(serializeByte, KVConfigSerializeWrapper.class);
