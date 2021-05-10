@@ -784,6 +784,9 @@ public class CommitLog {
 
     }
 
+    /**
+     * @TODO 写log
+     * **/
     public PutMessageResult putMessage(final MessageExtBrokerInner msg) {
         // Set the storage time
         msg.setStoreTimestamp(System.currentTimeMillis());
